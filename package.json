@@ -43,6 +43,7 @@
   "jest": {
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
+      "^puppeteer$": "puppeteer/lib/cjs/puppeteer/puppeteer.js",
       "\\.(css|less|scss)$": "identity-obj-proxy",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/__mocks__/fileMock.js"
     },
