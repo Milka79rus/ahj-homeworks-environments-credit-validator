@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Validator</title>
+</head>
+<body>
+
+  <div class="validator-container">
+    <h2>Check your credit card number</h2>
+    
+    <div class="card-logos">
+      <div class="logo visa" data-type="visa">Visa</div>
+      <div class="logo mastercard" data-type="mastercard">Mastercard</div>
+      <div class="logo mir" data-type="mir">МИР</div>
+      <div class="logo amex" data-type="amex">Amex</div>
+      <div class="logo discover" data-type="discover">Discover</div>
+      <div class="logo jcb" data-type="jcb">JCB</div>
+    </div>
+
+    <form id="validator-form">
+      <div class="input-group">
+        <input type="text" id="card-input" placeholder="Enter card number" autocomplete="off">
+        <button type="submit" id="submit-btn">Click to Validate</button>
+      </div>
+      <div id="result-message" class="message hidden"></div>
+    </form>
+  </div>
+
+</body>
+</html>

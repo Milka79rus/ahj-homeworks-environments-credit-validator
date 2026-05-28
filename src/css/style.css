@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.validator-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2f3640;
+}
+
+/* Иконки систем */
+.card-logos {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  flex: 1;
+  height: 35px;
+  border: 1px solid #dcdde1;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+  opacity: 0.4; /* По умолчанию выключены */
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* Стили для активных карт */
+.logo.active.visa { opacity: 1; background-color: #1a1f71; color: white; border-color: #1a1f71; }
+.logo.active.mastercard { opacity: 1; background-color: #eb001b; color: white; border-color: #eb001b; }
+.logo.active.mir { opacity: 1; background-color: #00a76f; color: white; border-color: #00a76f; }
+.logo.active.amex { opacity: 1; background-color: #007bc1; color: white; border-color: #007bc1; }
+.logo.active.discover { opacity: 1; background-color: #ff6000; color: white; border-color: #ff6000; }
+.logo.active.jcb { opacity: 1; background-color: #00377a; color: white; border-color: #00377a; }
+
+/* Форма */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+#card-input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #7f8c8d;
+  border-radius: 4px;
+  outline: none;
+}
+
+#submit-btn {
+  padding: 10px 15px;
+  background-color: #2ed573;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#submit-btn:hover { background-color: #26af5f; }
+
+/* Сообщения */
+.message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+.message.success { background-color: #d4edda; color: #155724; }
+.message.error { background-color: #f8d7da; color: #721c24; }
+.hidden { display: none !important; }
