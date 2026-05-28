@@ -1,10 +1,11 @@
-const puppeteer = require('puppeteer');
-
 describe('Credit Card Validator E2E', () => {
   let browser;
   let page;
 
   beforeAll(async () => {
+    // Динамический импорт ESM-модуля прямо в рантайме
+    const { default: puppeteer } = await import('puppeteer');
+    
     browser = await puppeteer.launch({
       headless: 'new',
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -14,7 +15,9 @@ describe('Credit Card Validator E2E', () => {
   });
 
   afterAll(async () => {
-    await browser.close();
+    if (browser) {
+      await browser.close();
+    }
   });
 
   test('should show success message for valid card', async () => {
