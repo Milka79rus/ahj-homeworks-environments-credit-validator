@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint . --fix",
     "test": "jest",
-    "e2e": "jest e2e/validator.test.js --testEnvironment=node --testPathIgnorePatterns=\"node_modules\""
+    "e2e": "jest e2e/validator.test.js --testEnvironment=node --testPathIgnorePatterns=node_modules"
   },
   "author": "coursar",
   "license": "MIT",

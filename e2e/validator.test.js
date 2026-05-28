@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer/dist/cjs/puppeteer/puppeteer.js');
 
 describe('Credit Card Validator E2E', () => {
   let browser;
